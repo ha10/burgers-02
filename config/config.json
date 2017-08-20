@@ -14,12 +14,7 @@
     "dialect": "mysql"
   },
   "production": {
-    // "username": "root",
-    // "password": "mysql-teststuff",
-    // "database": "burgers_db",
-    // "host": "127.0.0.1",
-    // "dialect": "mysql"
-    "use_env_variable":"JawsDB_URL",
+    "use_env_variable" : "JAWSDB_URL",
     "dialect": "mysql"
   }
 }
