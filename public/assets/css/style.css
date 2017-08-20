@@ -1,0 +1,112 @@
+html {
+  background: url("../images/burger-wht.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  font-family: 'Walter Turncoat', cursive;
+  color: #bb5a53;
+  margin-left: 2em;
+}
+
+h1 {
+  font-size: 3em;
+}
+
+h2 {
+  margin-bottom: 1em;
+}
+
+li {
+  padding: 5px;
+  margin: 5px;
+  list-style: none;
+  font-family: 'Coming Soon', cursive;
+  font-size: 1.5em;
+}
+
+.label {
+  font-weight: bold;
+}
+
+.add-burger-form {
+  padding: 5px;
+  margin: 5px;
+}
+
+.form-group {
+  margin-bottom: 1em;
+}
+
+p {
+  font-size: 1.5em;
+  font-family: 'Coming Soon', cursive;
+}
+
+form {
+  float: left;
+  margin-right: 1em;
+}
+
+button {
+  background-color: white;
+  font-size: .8em;
+  font-weight: 600;
+  color: #bb5a53;
+  border: 1.5px solid #bb5a53;
+  width: 100px;
+  height: 40px;
+}
+
+input[type="text"] {
+  width: 180px;
+  height: 20px;
+  font-size: 1em;
+  padding: .5em;
+  color: #bb5a53;
+}
+
+
+
+label {
+  font-size: 1.4em;
+  padding-right: 1em;
+}
+
+#top,
+#bottom,
+#left,
+#right {
+    background: #bb5a53;
+    position: fixed;
+}
+
+#left,
+#right {
+    top: 0;
+    bottom: 0;
+    width: 15px;
+}
+
+#left {
+    left: 0;
+}
+
+#right {
+    right: 0;
+}
+
+#top,
+#bottom {
+    left: 0;
+    right: 0;
+    height: 15px;
+}
+
+#top {
+    top: 0;
+}
+
+#bottom {
+    bottom: 0;
+}

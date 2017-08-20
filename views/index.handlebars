@@ -1,0 +1,58 @@
+<h1>Welcome to Burger Party!</h1>
+<p>It's what you wished Smorgasburg was.</p>
+
+<h2>Available Burgers</h2>
+
+<ul>
+  {{#each burgers}} {{#unless this.devoured}}
+  <li>
+    {{this.burger_name}}
+
+    <form action="/{{this.id}}?_method=PUT" method="POST">
+      <input type="hidden" name="devoured" value="true">
+      <button type="submit">Devour</button>
+    </form>
+
+    {{> burgers/cancel-burger}}
+  </li>
+  {{/unless}} {{/each}}
+</ul>
+
+<h2>Eaten Burgers</h2>
+
+<ul>
+  {{#each burgers}} {{#if this.devoured}}
+  <li>
+    {{this.burger_name}}
+
+    <form action="/{{this.id}}?_method=PUT" method="POST">
+      <input type="hidden" name="devoured" value="false">
+      <button type="submit">Reorder</button>
+    </form>
+
+    {{> burgers/remove-burger}}
+  </li>
+  {{/if}} {{/each}}
+</ul>
+
+<h2>Special Requests</h2>
+<form class="add-burger-form" action="/" method="POST">
+
+  <div class="form-group">
+    <label for="burger_name">Name it:</label>
+    <input type="text" name="burger_name">
+  </div>
+
+  <div class="form-group">
+    <label for="devoured">Eat now or later?</label><br>
+    <input type="radio" name="devoured" value="1" checked> Now<br>
+    <input type="radio" name="devoured" value="0"> Later
+  </div>
+
+  <button type="submit">Order</button>
+</form>
+
+<div id="left"></div>
+<div id="right"></div>
+<div id="top"></div>
+<div id="bottom"></div>
